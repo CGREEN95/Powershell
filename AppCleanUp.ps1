@@ -136,7 +136,6 @@ $ApprovedApps = @(
     "Microsoft.DesktopAppInstaller	                "
     "Microsoft.GamingServices	                    "
     "Microsoft.WindowsStore	                        "
-    "KDEe.V.Okular                                  " 
     "Microsoft.MicrosoftEdge.Stable                 "
     "RealtekSemiconductorCorp.RealtekAudioControl   "
     "Microsoft.WindowsCamera                        "
