@@ -140,6 +140,7 @@ $ApprovedApps = @(
     "Microsoft.MicrosoftEdge.Stable                 "
     "RealtekSemiconductorCorp.RealtekAudioControl   "
     "Microsoft.WindowsCamera                        "
+    "Microsoft.WindowsTerminal                      "
 
 )
 $ExcludeFilter = $ApprovedApps -join "|" -replace '\s',''
