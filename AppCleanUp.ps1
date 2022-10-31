@@ -1,3 +1,4 @@
+# List of Microsoft Store applications to keep
 $ApprovedApps = @(
     "1527c705-839a-4832-9118-54d4Bd6a0c89           "
     "c5e2524a-ea46-4f67-841f-6a9465d9d515           "
@@ -144,13 +145,13 @@ $ApprovedApps = @(
 
 )
 $ExcludeFilter = $ApprovedApps -join "|" -replace '\s',''
-
+# Remove applications for existing users
 foreach ( $PkgX in Get-Appxpackage -allusers ) {
     if ( $PkgX.Name -notmatch $ExcludeFilter ) {
         $PkgX | Remove-Appxpackage -AllUsers -ErrorAction SilentlyContinue
     }
 }
-
+# Remove applications for future users
 foreach ( $PkgPro in Get-AppxProvisionedPackage -Online ) {
     if ( $PkgPro.Name -notmatch $ExcludeFilter ) {
         $PkgPro | Remove-AppxProvisionedPackage -AllUsers -Online -ErrorAction SilentlyContinue
